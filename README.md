@@ -1,13 +1,8 @@
 # linc/LuaJIT
-Haxe/hxcpp @:native bindings for [LuaJIT](http://luajit.org/).
+Haxe/hxcpp @:native bindings for [LuaJIT](http://luajit.org/). This is a [linc](http://snowkit.github.io/linc/) library. Works on android too!
 
-This is a [linc](http://snowkit.github.io/linc/) library.
-
----
-
-This library works with the Haxe cpp target only.
-
----
+## Compile on android with command below!!!!!!!!
+`lime test android -D NO_PRECOMPILED_HEADERS`
 
 ### Example usage
 
