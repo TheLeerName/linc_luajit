@@ -2,7 +2,7 @@
 Haxe/hxcpp @:native bindings for [LuaJIT](http://luajit.org/). This is a [linc](http://snowkit.github.io/linc/) library. Works on android too!
 
 ## Compile on android with command below!!!!!!!!
-`lime test android -D NO_PRECOMPILED_HEADERS`
+`lime test android -D NO_PRECOMPILED_HEADERS`, or just add `<haxedef name="NO_PRECOMPILED_HEADERS" if="android" />` in your Project.xml
 
 ### Example usage
 
