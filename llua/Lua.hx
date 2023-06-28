@@ -566,9 +566,7 @@ class Lua_helper {
 
 		var cbf = callbacks.get(fname);
 
-		if(cbf == null) {
-			return 0;
-		}
+		if(cbf == null) return 0;
 
 		var nparams:Int = Lua.gettop(l);
 		var args:Array<Dynamic> = [];
@@ -577,14 +575,16 @@ class Lua_helper {
 			args[i] = Convert.fromLua(l, i + 1);
 		}
 
-		var ret:Dynamic = Reflect.callMethod(null, cbf, args);
+		var ret:Dynamic = null;
+		/* return the number of results */
+
+		ret = Reflect.callMethod(null,cbf,args);
 
 		if(ret != null){
 			Convert.toLua(l, ret);
+			return 1;
 		}
-
-		/* return the number of results */
-		return 1;
+		return 0;
 
 	} //callback_handler
 
